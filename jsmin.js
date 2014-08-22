@@ -60,7 +60,8 @@ String.prototype.has = function(c) {
   return this.indexOf(c) > -1;
 };
 
-exports.jsmin = jsmin;
+if (exports) { exports.jsmin = jsmin; }
+
 function jsmin(input, level, comment) {
 
   if (!input) return '';
